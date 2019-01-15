@@ -1,0 +1,11 @@
+
+"""
+  Парковочная площадка
+"""
+type Parking {
+  id: ID! @unique
+  name: String! @unique
+  # Places: [ParkingPlace!]! @relation(name: "ParkingPlaces")
+  Checkpoints: [Checkpoint!]! @relation(name: "CheckpointParkings")
+  DiagramNode: DiagramNode
+}

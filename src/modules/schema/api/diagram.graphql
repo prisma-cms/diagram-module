@@ -1,0 +1,7 @@
+
+type DiagramResponse{
+  success: Boolean!
+  message: String
+  errors: [Error!]!
+  data: Diagram
+}

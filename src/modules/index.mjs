@@ -4,6 +4,13 @@ import fs from "fs";
 import chalk from "chalk";
 
 import PrismaModule from "@prisma-cms/prisma-module";
+import UserModule from "@prisma-cms/user-module";
+
+import DiagramModule from "./diagram";
+import DiagramNodeModule from "./diagramNode";
+import DiagramLinkModule from "./diagramLink";
+import DiagramPortInModule from "./diagramPortIn";
+import DiagramPortOutModule from "./diagramPortOut";
 
 import MergeSchema from 'merge-graphql-schemas';
 
@@ -28,6 +35,15 @@ class Module extends PrismaModule {
 
     Object.assign(this, {
     });
+
+    this.mergeModules([
+      UserModule,
+      DiagramModule,
+      DiagramNodeModule,
+      DiagramLinkModule,
+      DiagramPortInModule,
+      DiagramPortOutModule,
+    ]);
 
   }
 
@@ -63,7 +79,10 @@ class Module extends PrismaModule {
       baseSchema = fs.readFileSync(schemaFile, "utf-8");
     }
 
-    let apiSchema = super.getApiSchema(types.concat(baseSchema), []);
+    let apiSchema = super.getApiSchema(types.concat(baseSchema), [
+      // "DiagramCreateInput",
+      // "DiagramUpdateInput",
+    ]);
 
     let schema = fileLoader(__dirname + '/schema/api/', {
       recursive: true,

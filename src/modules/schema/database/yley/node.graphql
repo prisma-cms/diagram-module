@@ -1,0 +1,7 @@
+
+type DiagramNode {
+  id: ID! @unique
+  Building: Building
+  Checkpoint: Checkpoint
+  Parking: Parking
+}

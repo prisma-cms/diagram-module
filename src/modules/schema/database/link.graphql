@@ -1,0 +1,10 @@
+
+type DiagramLink {
+  id: ID! @unique
+  width: Int
+  color: String
+  curvyness: Int
+  PortIn: DiagramPortIn!
+  PortOut: DiagramPortOut!
+  CreatedBy: User
+}

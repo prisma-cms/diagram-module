@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@prisma-cms/prisma-module": "latest",
+    "@prisma-cms/user-module": "latest",
     "chalk": "^2.4.1",
     "merge-graphql-schemas": "latest"
   },

@@ -1,0 +1,14 @@
+
+type Diagram {
+  id: ID! @unique
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  name: String
+  code: ID @unique
+  CreatedBy: User
+  offsetX: Float @default(value: 0)
+  offsetY: Float @default(value: 0)
+  zoom: Float @default(value: 100)
+  gridSize: Float @default(value: 0)
+  Nodes: [DiagramNode!]!
+}

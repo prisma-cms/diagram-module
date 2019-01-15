@@ -38,36 +38,132 @@ const requiredTypes = [
     },
   },
   {
-    name: "TestUser",
+    name: "Diagram",
     fields: {
       both: [
-        "testUsername",
+        "id",
+        "name",
+        "code",
+        "createdAt",
+        "updatedAt",
+        "offsetX",
+        "offsetY",
+        "zoom",
+        "gridSize",
+        "CreatedBy",
+        "Nodes",
       ],
       prisma: [
-        "prismaTestUsername",
       ],
       api: [
-        "apiTestUsername",
       ],
     },
   },
   {
-    name: "TestUserCreateInput",
+    name: "DiagramNode",
     fields: {
+      both: [
+        "id",
+        "name",
+        "color",
+        "x",
+        "y",
+        "Diagram",
+        "PortsIn",
+        "PortsOut",
+        "Building",
+        "Checkpoint",
+        "Parking",
+      ],
+      prisma: [
+      ],
       api: [
-        "testUsername",
       ],
     },
   },
   {
-    name: "TestEnumFields",
+    name: "DiagramPortIn",
     fields: {
       both: [
-      ],
-      api: [
-        "TestField",
+        "id",
+        "name",
+        "Node",
+        "Links",
       ],
       prisma: [
+      ],
+      api: [
+      ],
+    },
+  },
+  {
+    name: "DiagramPortOut",
+    fields: {
+      both: [
+        "id",
+        "name",
+        "Node",
+        "Links",
+      ],
+      prisma: [
+      ],
+      api: [
+      ],
+    },
+  },
+  {
+    name: "DiagramLink",
+    fields: {
+      both: [
+        "id",
+        "width",
+        "color",
+        "curvyness",
+        "PortIn",
+        "PortOut",
+      ],
+      prisma: [
+      ],
+      api: [
+      ],
+    },
+  },
+  {
+    name: "Building",
+    fields: {
+      both: [
+        "id",
+        "DiagramNode",
+      ],
+      prisma: [
+      ],
+      api: [
+      ],
+    },
+  },
+  {
+    name: "Checkpoint",
+    fields: {
+      both: [
+        "id",
+        "DiagramNode",
+      ],
+      prisma: [
+      ],
+      api: [
+      ],
+    },
+  },
+  {
+    name: "Parking",
+    fields: {
+      both: [
+        "id",
+        "DiagramNode",
+      ],
+      prisma: [
+      ],
+      api: [
       ],
     },
   },

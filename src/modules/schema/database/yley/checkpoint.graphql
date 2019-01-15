@@ -1,0 +1,22 @@
+"""КПП. Может вести к зданию или парковке"""
+type Checkpoint {
+  id: ID! @unique
+  name: String!
+  code: ID @unique
+  type: CheckpointType
+  active: Boolean @default(value: true)
+  Buildings: [Building!]! @relation(name: "CheckpointBuildings")
+  Parkings: [Parking!]! @relation(name: "CheckpointParkings")
+  DiagramNode: DiagramNode
+}
+
+
+"""Тип проходной"""
+enum CheckpointType {
+  
+  """Люди"""
+  People
+
+  """Машины"""
+  Car
+}

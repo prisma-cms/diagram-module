@@ -1,0 +1,10 @@
+
+"""Здание"""
+type Building {
+  id: ID! @unique
+  name: String!
+  code: ID @unique
+  active: Boolean @default(value: true)
+  Checkpoints: [Checkpoint!]! @relation(name: "CheckpointBuildings")
+  DiagramNode: DiagramNode
+}

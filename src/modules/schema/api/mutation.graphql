@@ -1,0 +1,41 @@
+
+type Error {
+  key: String!
+  message: String!
+}
+
+
+
+type Mutation {
+   
+ 
+  createDiagramProcessor(
+    data: DiagramCreateInput!
+  ): DiagramResponse!
+
+  updateDiagramProcessor(
+    data: DiagramUpdateInput!
+    where: DiagramWhereUniqueInput!
+  ): DiagramResponse!
+   
+ 
+  createDiagramNodeProcessor(
+    data: DiagramNodeCreateInput!
+  ): DiagramNodeResponse!
+
+  updateDiagramNodeProcessor(
+    data: DiagramNodeUpdateInput!
+    where: DiagramNodeWhereUniqueInput!
+  ): DiagramNodeResponse!
+   
+ 
+  createDiagramLinkProcessor(
+    data: DiagramLinkCreateInput!
+  ): DiagramLinkResponse!
+
+  updateDiagramLinkProcessor(
+    data: DiagramLinkUpdateInput!
+    where: DiagramLinkWhereUniqueInput!
+  ): DiagramLinkResponse!
+
+}

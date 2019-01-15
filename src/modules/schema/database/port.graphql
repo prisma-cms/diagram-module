@@ -1,0 +1,16 @@
+
+type DiagramPortIn {
+  id: ID! @unique
+  name: String!
+  Node: DiagramNode!
+  Links: [DiagramLink!]!
+  CreatedBy: User
+}
+
+type DiagramPortOut {
+  id: ID! @unique
+  name: String!
+  Node: DiagramNode!
+  Links: [DiagramLink!]!
+  CreatedBy: User
+}

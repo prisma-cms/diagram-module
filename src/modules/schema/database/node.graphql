@@ -1,0 +1,12 @@
+
+type DiagramNode {
+  id: ID! @unique
+  name: String!
+  Diagram: Diagram!
+  color: String
+  x: Float @default(value: 0)
+  y: Float @default(value: 0)
+  PortsIn: [DiagramPortIn!]!
+  PortsOut: [DiagramPortOut!]!
+  CreatedBy: User
+}

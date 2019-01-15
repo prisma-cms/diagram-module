@@ -1,0 +1,7 @@
+
+type DiagramLinkResponse{
+  success: Boolean!
+  message: String
+  errors: [Error!]!
+  data: DiagramLink
+}
